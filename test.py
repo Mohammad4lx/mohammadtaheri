@@ -82,3 +82,29 @@ processor = NLPProcessor()
 features = processor.extract_features(text)
 
 print(features)
+
+class Chatbot:
+
+    def __init__(self):
+        self.intents = json.loads(open('intents.json').read())
+        self.model = load_model('chatbot_model.h5')
+
+    def preprocess_text(self, text):
+        # Preprocess user input   
+       
+    
+    def predict_class(self, text):
+        # Predict intent class using model
+
+    
+    def get_response(self, intent):
+        # Get bot response for predicted intent
+    
+
+    def chat(self, message):
+
+        intent = self.predict_class(message)
+        response = self.get_response(intent)
+
+        return response
+    
